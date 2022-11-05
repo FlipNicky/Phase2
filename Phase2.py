@@ -1,4 +1,4 @@
-#   Student Name
+#   Philip Nicholson
 #   CIS261
 #   Project Phase 2
 def GetEmpName():
@@ -17,13 +17,13 @@ def GetHoursWorked():
     hours = float(input('Enter amount of hours worked:  '))
     return hours
 def GetHourlyRate():
-    hourlyrate = float(input ("Enter hourly rate: "))
+    hourlyrate = float(input('Enter hourly rate: '))
     return hourlyrate
 def GetTaxRate():
-    taxrate = float(input ("Enter tax rate: "))
+    taxrate = float(input('Enter tax rate: '))
     return taxrate
 def CalcTaxAndNetPay(hours, hourlyrate, taxrate):
-    grosspay = hours * hourlyrate
+    grosspay = hours * hourlyrate 
     incometax = grosspay * taxrate
     netpay = grosspay - incometax
     return grosspay, incometax, netpay
@@ -57,10 +57,10 @@ def printinfo(EmpDetailList):
         # the following line of code assigns TotEmployees totals to dictionary 
         EmpTotals["TotEmp"] = TotEmployees
         # write code to assign TotHours, TotGrossPay, TotTax, and TotNetPay to corresponding dictionary item
-        HourTotals["HrsTot"] = TotHours
-        GrossPayTotals["GrossP"] = TotGrossPay
-        TaxTotals["TxTot"] = TotTax
-        NetPayTotals["NetP"] = TotNetPay
+        EmpTotals["HrsTot"] = TotHours
+        EmpTotals["GrossP"] = TotGrossPay
+        EmpTotals["TxTot"] = TotTax
+        EmpTotals["NetP"] = TotNetPay
 
 
  
@@ -79,10 +79,10 @@ def PrintTotals(EmpTotals):
     # the following line of code prints Total Employees from the dictionary
     print(f'Total Number Of Employees: {EmpTotals["TotEmp"]}')
     # write code to print TotalHrs, TotGrossPay, TotTax and TotNetPay from dictionary
-    print(f'Total Hours Worked: {HourTotals["HrsTot"]}')
-    print(f'Total Gross Pay: {GrossPayTotals["GrossP"]}')
-    print(f'Total Income Tax: {TaxTotals["TxTot"]}')
-    print(f'Total Net Pay: {NetPayTotals["NetP"]}')
+    print(f'Total Hours Worked: {EmpTotals["HrsTot"]}')
+    print(f'Total Gross Pay: {EmpTotals["GrossP"]}')
+    print(f'Total Income Tax: {EmpTotals["TxTot"]}')
+    print(f'Total Net Pay: {EmpTotals["NetP"]}')
 
 
 
